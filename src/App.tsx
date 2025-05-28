@@ -28,10 +28,8 @@ function App() {
     <main>
       <h1>My todos</h1>
       <P>Test - can you see this?</P>
-      <button onClick={createTodo}>+ new</button>
-      <ul>
-        {todos.map((todo) => (
-          <li key={todo.id}>{todo.content}</li>
+            <ul>
+        {todos.map((todo) => <li onClick={() => deleteTodo(todo.id)} key={todo.id}>{todo.content}</li>
         ))}
       </ul>
       <div>
