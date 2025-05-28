@@ -14,6 +14,12 @@ function App() {
     });
   }, []);
 
+  
+  function deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }
+
+    
   function createTodo() {
     client.models.Todo.create({ content: window.prompt("Todo content") });
   }
